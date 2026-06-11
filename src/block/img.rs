@@ -2,7 +2,8 @@ use serde::{Serialize, Deserialize};
 
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
-pub struct File {
+pub struct Img {
     pub path: String,
-    pub size_mb: u64,
+    pub size_mb: f64,
+    pub size: [f32;2],
 }
