@@ -1,9 +1,10 @@
 use eframe::egui;
 
-mod board;
-mod block;
 
-use board::Board;
+mod block;
+mod app;
+
+use app::App;
 
 
 fn main() -> eframe::Result<()> {
@@ -17,6 +18,6 @@ fn main() -> eframe::Result<()> {
     eframe::run_native(
         "MiMap",
         options,
-        Box::new(|_cc| Box::new(Board::default())),
+        Box::new(|_cc| Box::new(App::default())),
     )
 }
